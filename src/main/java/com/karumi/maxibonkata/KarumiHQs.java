@@ -2,13 +2,11 @@ package com.karumi.maxibonkata;
 
 import java.util.List;
 
-/**
- * Created by gloria on 29/4/17.
- */
 
 public class KarumiHQs {
     private int maxibonsLeft = 10;
     private int minMaxibons = 2;
+    private final int NUM_MAXIBON = 10;
 
     public void openFridge(Developer developer){
         maxibonsLeft = maxibonsLeft - developer.getNumberOfMaxibonToGrab();
@@ -16,7 +14,7 @@ public class KarumiHQs {
             maxibonsLeft = 0;
         }
         if (maxibonsLeft <= 2){
-            maxibonsLeft += 10;
+            maxibonsLeft += NUM_MAXIBON;
         }
     }
 
