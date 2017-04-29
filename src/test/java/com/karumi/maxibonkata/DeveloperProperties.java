@@ -11,7 +11,6 @@ import static junit.framework.Assert.assertTrue;
 
 @RunWith(JUnitQuickcheck.class) public class DeveloperProperties {
 
-
     @Property
     public void theNumberOfMaxibonsToConsumeNotNegative(int numberOfMaxibons) {
         Developer developer = new Developer("Pedro", numberOfMaxibons);
@@ -26,7 +25,6 @@ import static junit.framework.Assert.assertTrue;
         Developer developer = new Developer(nameDeveloper, numberOfMaxibons);
         if (numberOfMaxibons < 0){
             assertTrue(developer.getNumberOfMaxibonToGrab() == 0);
-
         }else{
             assertEquals(numberOfMaxibons, developer.getNumberOfMaxibonToGrab());
         }

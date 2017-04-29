@@ -15,6 +15,7 @@ import static junit.framework.Assert.assertTrue;
 @RunWith(JUnitQuickcheck.class) public class KarumiHQsProperties {
 
     private KarumiHQs karumiHQs;
+    private Chat chat;
 
     @Before public void setUp(){
         karumiHQs = new KarumiHQs();
@@ -39,6 +40,14 @@ import static junit.framework.Assert.assertTrue;
 
     @Property
     public void test3(List<@From(KarumiesGenerator.class) Developer> developers) {
+
+        karumiHQs.openFridge(developers);
+
+        assertTrue(karumiHQs.getMaxibonsLeft() > 2);
+    }
+
+    @Property
+    public void test4(List<@From(KarumiesGenerator.class) Developer> developers) {
 
         karumiHQs.openFridge(developers);
 

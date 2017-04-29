@@ -4,6 +4,9 @@ import java.util.List;
 
 
 public class KarumiHQs {
+
+    private Chat chat;
+
     private int maxibonsLeft = 10;
     private int minMaxibons = 2;
     private final int NUM_MAXIBON = 10;
@@ -15,6 +18,7 @@ public class KarumiHQs {
         }
         if (maxibonsLeft <= 2){
             maxibonsLeft += NUM_MAXIBON;
+            chat.sendMessage("Hay que comprar Maxibons");
         }
     }
 
