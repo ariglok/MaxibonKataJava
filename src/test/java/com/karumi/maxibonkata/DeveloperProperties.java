@@ -4,6 +4,7 @@ import com.pholser.junit.quickcheck.From;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static junit.framework.Assert.assertEquals;
@@ -31,12 +32,6 @@ import static junit.framework.Assert.assertTrue;
         assertEquals(nameDeveloper, developer.getName());
     }
 
-    /*@Property
-    public void test2(@From(PositiveNumberGenerator.class) Integer positive){
-        System.out.println("PositiveNumberGenerator Test "+positive.intValue());
-        Developer developer = new Developer("Pedro", positive.intValue());
-        assertTrue(developer.getNumberOfMaxibonToGrab() > 0);
-    }*/
 
 
 }
