@@ -15,16 +15,23 @@ public class KarumiHQs {
         if (maxibonsLeft < 0){
             maxibonsLeft = 0;
         }
+        if (maxibonsLeft <= 2){
+            maxibonsLeft += 10;
+        }
     }
 
     public void openFridge(List<Developer> developerList){
         for(Developer developer: developerList) {
             openFridge(developer);
-            if (maxibonsLeft <= 2){
-                maxibonsLeft += maxibonsLeft;
-            }
         }
     }
 
 
+    public int getMaxibonsLeft() {
+        return maxibonsLeft;
+    }
+
+    public int getMinMaxibons() {
+        return minMaxibons;
+    }
 }
