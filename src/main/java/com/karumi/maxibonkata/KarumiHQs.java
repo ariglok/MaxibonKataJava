@@ -11,6 +11,10 @@ public class KarumiHQs {
     private int minMaxibons = 2;
     private final int NUM_MAXIBON = 10;
 
+    public KarumiHQs(Chat chat) {
+        this.chat = chat;
+    }
+
     public void openFridge(Developer developer){
         maxibonsLeft = maxibonsLeft - developer.getNumberOfMaxibonToGrab();
         if (maxibonsLeft < 0){
