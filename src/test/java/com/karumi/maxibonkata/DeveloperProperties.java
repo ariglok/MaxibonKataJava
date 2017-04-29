@@ -16,5 +16,9 @@ import static junit.framework.Assert.assertTrue;
         assertTrue(developer.getNumberOfMaxibonToGrab() >= 0);
     }
 
-
+    @Property
+    public void theNumberOfMaxibonsToConsumeName(String nameDeveloper, int numberOfMaxibons) {
+        Developer developer = new Developer(nameDeveloper, numberOfMaxibons);
+        assertTrue(developer.getNumberOfMaxibonToGrab() >= 0);
+    }
 }
